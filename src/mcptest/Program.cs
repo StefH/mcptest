@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using Microsoft.Extensions.Logging;
+using ModelContextProtocol;
 using ModelContextProtocol.Client;
-using ModelContextProtocol.Configuration;
 using ModelContextProtocol.Protocol.Transport;
 
 var config = new McpServerConfig
@@ -11,7 +11,7 @@ var config = new McpServerConfig
     TransportType = TransportTypes.StdIo,
     TransportOptions = new Dictionary<string, string>
     {
-        // dotnet tool install --version 0.0.1-preview-02 --global mcpserver.everything.stdio
+        // dotnet tool install --version 0.0.1-preview-04 --global mcpserver.everything.stdio
         { "command", "mcpserver.everything.stdio" }
     }
 };
