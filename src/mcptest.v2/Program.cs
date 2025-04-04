@@ -22,5 +22,5 @@ var options = new McpClientOptions
     ClientInfo = new() { Name = "everything-client", Version = "1.0.0" }
 };
 
-var client = await McpClientFactory.CreateAsync(config, options, null, LoggerFactory.Create(c => c.AddConsole()));
+await using var client = await McpClientFactory.CreateAsync(config, options, null, LoggerFactory.Create(c => c.AddConsole()));
 _ = await client.ListToolsAsync();
